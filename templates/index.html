@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智能聊天机器人</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>智能聊天机器人</h1>
+            <button id="clear-btn" class="clear-btn">清除历史记录</button>
+        </div>
+        
+        <div class="chat-container">
+            <div id="chat-history" class="chat-history">
+                <!-- 聊天记录将在这里显示 -->
+                <div class="message bot-message">
+                    <div class="message-content">
+                        你好呀~ 我是玉兰 你的专属助手 有什么我可以帮你的吗？
+                    </div>
+                </div>
+            </div>
+            
+            <div class="input-area">
+                <textarea 
+                    id="user-input" 
+                    placeholder="输入你的消息..." 
+                    rows="3"></textarea>
+                <button id="send-btn">发送</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
